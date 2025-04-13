@@ -1,58 +1,93 @@
-.header {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-    margin: 92px 24px 96px;
+/* блок header(шапка) */
+  .header {
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  padding: 92px 50px;
   }
-  
-  .header__menu {
-    margin-left: 28px;
-  }
-  
+
   .header__links-list {
-    display: flex;
-    column-gap: 32px;
-    list-style: circle;
-    padding-top: 4px;
+  display: flex;
+  align-items: center;
   }
-  
+
+  .header__links-list-main {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  }
+
+  .header__links-list-item,
   .header__links-list-item_no-bullit {
-    list-style: none;
+  display: list-item;
+  list-style-type: none;
   }
-  
+
+  .header__link_active,
   .header__link {
-    font-size: 18px;
-    line-height: normal;
-    text-decoration: none;
-    border-bottom: 1px solid;
+  text-decoration: none;
+  color: #000;
+  font-family: Raleway, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
   }
-  
-  .header__link_active {
-    border-bottom: none;
+
+  .header__link {
+  display: list-item;
+  list-style-type: circle;
+  border-bottom: 1px solid black;
   }
   
   .header__logo {
-    max-width: 148px;
-    max-height: 105px;
-    display: flex;
-    margin-left: 38px;
+    display: grid;
+    align-content: start;
+    width: 138px;
+    height: 105px;
   }
+  
+  .header__logo-image {
+    display: block;
+    align-content: start;
+  }
+  
+  /*.header__address {
+    margin-right: 58px;
+  }*/
   
   .header__address {
-    margin-right: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
   }
   
-  .address {
+  .contacts-element {
+    width: 240px;
+    padding-right: 3px;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    font-style: normal;
+    color: #000;
+    font-family: Raleway, sans-serif;
     font-size: 18px;
     font-style: normal;
-    line-height: 24.3px;
-    letter-spacing: 0.01em;
+    font-weight: 400;
+    line-height: 23.6px;
   }
   
-  .address__link {
-    text-underline-offset: 4px;
+  .mail-address,
+  .phone-address {
+    text-decoration: none;
+    display: flex;
+    align-self: flex-start;
+    border-bottom: 0.5px solid black;
+  }
+  
+  .city-address-second,
+  .city-address-first {
+    display: flex;
+    align-self: flex-start;
   }
   
   
@@ -179,7 +214,6 @@
     justify-content: center;
     list-style: none;
     margin: 28px 0;
-    /* flex-wrap: wrap; */
   }
   
   .card-link {
